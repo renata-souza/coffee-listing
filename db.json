@@ -1,0 +1,64 @@
+{
+  "products": [
+    {
+      "name": "Cappuccino",
+      "picture": "/imgs/cappuccino.jpg",
+      "pricing": "5.20",
+      "rating": "4.7",
+      "votes": 65,
+      "available": true,
+      "popular": true,
+      "src": "https://i.imgur.com/YjJ9evR.jpg"
+    },
+    {
+      "name": "House Coffee",
+      "picture": "/imgs/house-coffee.jpg",
+      "pricing": "3.50",
+      "rating": "4.85",
+      "votes": 14,
+      "available": true,
+      "popular": true,
+      "src": "https://i.imgur.com/zlmGR04.jpeg"
+    },
+    {
+      "name": "Espresso",
+      "picture": "/imgs/espresso.jpg",
+      "pricing": "2.50",
+      "rating": "4.9",
+      "votes": 55,
+      "available": true,
+      "popular": false,
+      "src": "https://i.imgur.com/dUOwfoO.jpeg"
+    },
+    {
+      "name": "Coffee Latte",
+      "picture": "/imgs/coffee-latte.jpg",
+      "pricing": "4.50",
+      "rating": "5.0",
+      "votes": 23,
+      "available": true,
+      "popular": false,
+      "src": "https://i.imgur.com/RcB5Gta.jpeg"
+    },
+    {
+      "name": "Chocolate Coffee",
+      "picture": "/imgs/chocolate-coffee.jpg",
+      "pricing": "4.00",
+      "rating": "4.65",
+      "votes": 122,
+      "available": false,
+      "popular": false,
+      "src": "https://i.imgur.com/5z8sPyY.jpeg"
+    },
+    {
+      "name": "Valentine Special",
+      "picture": "/imgs/valentine-special.jpg",
+      "pricing": "5.50",
+      "rating": "No ratings",
+      "votes": 0,
+      "available": true,
+      "popular": false,
+      "src": "https://i.imgur.com/DnC1v1u.jpeg"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap');
+
+:root {
+  --gray-100: #6F757C;
+  --gray-200: #1B1D1F;
+  --gray-300: #111315;
+  --beige: #FEF7EE;
+  --green: #BEE3CC;
+  --yellow: #F6C768;
+  --red: #ED735D;
+}
+
+main {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: var(--gray-300);
+}
+
+main > img {
+  height: 270px;
+  object-fit: cover;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 390px;
+  position: relative;
+  top: -140px;
+  margin: 0 auto;
+  padding: 80px 35px;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: var(--gray-200);
+}
+
+h1 {
+  color: var(--beige);
+  font-size: 32px;
+  font-weight: 600;
+  z-index: 10;
+}
+
+p {
+  color: var(--gray-100);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+  margin: 10px 0;
+  z-index: 10;
+}
+
+button {
+  padding: 5px 10px;
+  font-size: 14px;
+  color: var(--beige);
+  margin: 10px 5px 40px 5px;
+  font-weight: 500;
+  border-radius: 7px;
+}
+
+button.active {
+  background-color: var(--gray-100);
+}
+
+.products-list-header {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+}
+
+.products-list-header > img {
+  position: absolute;
+  right: -98px;
+  top: -47px;
+}
+
+.loading {
+  color: var(--beige);
+}
