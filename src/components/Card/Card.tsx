@@ -14,7 +14,7 @@ const Card: React.FC<{ product: Product }> = ({ product }) => {
     <div className={styles.cardWrapper}>
       <div className={styles.cardImg}>
         <Image loader={myLoader} src={product.src} alt={product.name} width={250} height={150} className={styles.productImg} />
-        <span className={styles.popular}>Popular</span>
+        {product.available && (product.votes > 50) && <span className={styles.popular}>Popular</span>}
       </div>
 
       <div className={styles.cardPricing}>

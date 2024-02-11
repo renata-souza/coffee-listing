@@ -10,12 +10,23 @@ import './style.css';
 
 export default function Home() {
   const [products, setProducts] = useState<Product[]>()
+  const [active, setActive] = useState<'available' | 'all'>('all')
+  const [availableProducts, setAvailableProducts] = useState<Product[]>()
   const [loading, setLoading] = useState(true)
 
   async function fetchProducts() {
     setLoading(true)
     const products = await getProducts()
     setProducts(products)
+    setLoading(false)
+  }
+
+  function getAvailableProducts() {
+    setLoading(true)
+    setActive('available')
+
+    const availableProducts = products?.filter(product => product.available)
+    setAvailableProducts(availableProducts)
     setLoading(false)
   }
 
@@ -37,21 +48,16 @@ export default function Home() {
           <h1>Our Collection</h1>
           <p>Introducing our Coffee Collection, a selection of unique coffees from different roast types and origins, expertly roasted in small batches and shipped fresh weekly.</p>
           <div>
-            <button className="active">All Products</button>
-            <button>Available Now</button>
+            <button onClick={() => setActive('all')} className={active === 'all' ? 'active' : ''}>All Products</button>
+            <button onClick={getAvailableProducts} className={active === 'available' ? 'active' : ''} >Available Now</button>
           </div>
         </div>
 
-        {loading
-          ? <p className="loading">Loading...</p>
-          : (
-            <>
-              {products?.map(product => (
-                <Card product={product} key={product.name} />
-              ))}
-            </>
-          )
-        }
+        <div className="products-list-cards">
+          {loading && <p className="loading">Loading...</p>}
+          {active === 'all' && products?.map(product => <Card product={product} key={product.name} /> )}
+          {active === 'available' && availableProducts?.map(product => <Card product={product} key={product.name} /> )}
+        </div>
       </section>
 
     </main>
