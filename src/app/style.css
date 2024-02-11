@@ -17,6 +17,7 @@
 main {
   width: 100vw;
   min-height: 100vh;
+
   background-color: var(--gray-300);
 }
 
@@ -26,23 +27,27 @@ main > img {
 }
 
 section {
+  width: 390px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 390px;
+
   position: relative;
   top: -140px;
+
   margin: 0 auto;
   padding: 35px;
+
   border-radius: 15px;
-  overflow: hidden;
   background-color: var(--gray-200);
+  overflow: hidden;
 }
 
 h1 {
   color: var(--beige);
   font-size: 32px;
   font-weight: 600;
+
   margin-top: 50px;
   z-index: 10;
 }
@@ -53,16 +58,19 @@ p {
   font-weight: 500;
   line-height: 1.2;
   text-align: center;
+
   margin: 10px 0;
   z-index: 10;
 }
 
 button {
-  padding: 5px 10px;
-  font-size: 14px;
   color: var(--beige);
-  margin: 10px 5px 40px 5px;
+  font-size: 14px;
   font-weight: 500;
+  
+  padding: 5px 10px;
+  margin: 10px 5px 40px 5px;
+
   border-radius: 7px;
 }
 
@@ -76,19 +84,15 @@ button.active {
 
 .products-list-header {
   display: flex;
-  position: relative;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 .products-list-header > img {
   position: absolute;
   right: -98px;
   top: 0;
-}
-
-.products-list-cards {
-
 }
 
 .loading {

@@ -1,12 +1,14 @@
 'use client'
 
-import Card from "@/components/Card/Card";
-import { getProducts } from "@/data/api/products";
-import Image from "next/image";
-import { useEffect, useState } from "react";
-import heroBanner from '../../public/bg-cafe.jpg';
-import vector from '../../public/vector.svg';
-import './style.css';
+import Image from "next/image"
+import { useEffect, useState } from "react"
+
+import Card from "@/components/Card/Card"
+import vector from "../../public/vector.svg"
+import { getProducts } from "@/data/api/products"
+import heroBanner from "../../public/bg-cafe.jpg"
+
+import "./style.css"
 
 export default function Home() {
   const [products, setProducts] = useState<Product[]>()
@@ -47,6 +49,7 @@ export default function Home() {
           <Image src={vector} alt="detalhe" />
           <h1>Our Collection</h1>
           <p>Introducing our Coffee Collection, a selection of unique coffees from different roast types and origins, expertly roasted in small batches and shipped fresh weekly.</p>
+
           <div>
             <button onClick={() => setActive('all')} className={active === 'all' ? 'active' : ''}>All Products</button>
             <button onClick={getAvailableProducts} className={active === 'available' ? 'active' : ''} >Available Now</button>
@@ -59,7 +62,6 @@ export default function Home() {
           {active === 'available' && availableProducts?.map(product => <Card product={product} key={product.name} /> )}
         </div>
       </section>
-
     </main>
-  );
+  )
 }

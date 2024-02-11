@@ -1,13 +1,15 @@
-import Image from 'next/image'
 import React from 'react'
-import styles from './Card.module.css'
-import rating from '../../../public/Star_fill.svg'
+import Image from 'next/image'
+
 import noRating from '../../../public/Star.svg'
+import rating from '../../../public/Star_fill.svg'
+
+import styles from './Card.module.css'
 
 const Card: React.FC<{ product: Product }> = ({ product }) => {
 
   const myLoader = () => {
-    return product.src;
+    return product.src
   }
 
   return (
