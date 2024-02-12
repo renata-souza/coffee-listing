@@ -15,7 +15,7 @@ const Card: React.FC<{ product: Product }> = ({ product }) => {
   return (
     <div className={styles.cardWrapper}>
       <div className={styles.cardImg}>
-        <Image loader={myLoader} src={product.src} alt={product.name} width={250} height={150} className={styles.productImg} />
+        <Image loader={myLoader} src={product.src} alt={product.name} width={250} height={150} unoptimized className={styles.productImg} />
         {product.available && (product.votes > 50) && <span className={styles.popular}>Popular</span>}
       </div>
 
@@ -27,8 +27,8 @@ const Card: React.FC<{ product: Product }> = ({ product }) => {
       <div className={styles.cardInfo}>
         <div className={styles.rating}>
           {product.votes > 0
-            ? <Image src={rating} alt="star" />
-            : <Image src={noRating} alt="star" />
+            ? <Image src={rating} alt="star filled in yellow" />
+            : <Image src={noRating} alt="gray star outline" />
           }
           {product.rating}
           {product.votes > 0 && <span>({product.votes} votes)</span>}
